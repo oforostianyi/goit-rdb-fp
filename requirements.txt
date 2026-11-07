@@ -1,5 +1,5 @@
-pandas
-SQLAlchemy
-psycopg2-binary
-pgserver
-notebook
+pandas>=2.2,<4
+SQLAlchemy>=2.0,<3
+psycopg2-binary>=2.9,<3
+pgserver==0.1.4
+notebook>=7,<8

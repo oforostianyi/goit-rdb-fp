@@ -5,14 +5,17 @@ Notebook із PostgreSQL: завантаження датасету, норма�
 
 ## Датасет
 
-Джерело — Kaggle-датасет [Infectious statistics of the World](https://www.kaggle.com/datasets/brunopighi/infectious-diseases)
+Джерело — курсова копія файла `infectious_cases.csv` на
+[Google Drive](https://drive.google.com/file/d/1dQf-uVXzYPYYGgXsG1y4Q1qDdhP2miZl/view).
+Це Kaggle-датасет [Infectious statistics of the World](https://www.kaggle.com/datasets/brunopighi/infectious-diseases)
 (автор Bruno Pighi). Дані первісно зібрані Our World in Data на основі
 статистики ВООЗ і Світового банку: кількість випадків інфекційних захворювань
 за країнами, регіонами та роками.
 
 Розмір вибірки:
 
-- файл `data/infectious_cases.csv`, близько 0,5 МБ;
+- файл `data/infectious_cases.csv`, 540 895 байт, SHA-256
+  `226a0ff1916de44182d881b00d21cd59c1d58ae2ff6ec47d7a8042d7bc03f289`;
 - 10 521 рядок даних, 12 колонок;
 - 245 унікальних комбінацій `Entity` + `Code` (окремі країни, регіони та групи);
 - роки 1920–2023, показники хвороб мають багато пропусків
@@ -26,8 +29,9 @@ CSV уже в репозиторії — вистачить склонувати
 1. спочатку шукає `data/infectious_cases.csv` у папці проєкту;
 2. потім `/content/infectious_cases.csv` (для Colab, куди файл можна
    закинути вручну);
-3. наостанок завантажує копію по URL і звіряє SHA-256, щоб не працювати
-   з іншою версією даних.
+3. наостанок завантажує курсову копію з Google Drive.
+
+Після цього ноутбук звіряє SHA-256, щоб не працювати з іншою версією даних.
 
 ## Як запустити
 
@@ -43,6 +47,7 @@ jupyter lab goit-rdb-fp.ipynb
 У Google Colab: відкрийте `goit-rdb-fp.ipynb`, виконайте Runtime →
 Restart and run all. Ноутбук сам підніме PostgreSQL: для Python 3.9–3.12
 через `pgserver`, для новіших версій — через системний PostgreSQL з apt.
+Якщо `pgserver` не встановиться, ноутбук не зупиниться, а одразу перейде до apt.
 
 ## Що робиться в ноутбуці
 
