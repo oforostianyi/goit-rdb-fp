@@ -1,0 +1,6 @@
+.ipynb_checkpoints/
+__pycache__/
+.venv/
+build_notebook.py
+task.txt
+hw_template.ipynb
